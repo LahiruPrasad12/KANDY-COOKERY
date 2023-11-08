@@ -51,30 +51,44 @@ const Navbar = () => {
                     : "bg-black opacity-50 transition duration-300 ease-in"
             }`}
         >
+
             <div className="flex items-center">
                 <h3 className="font-extrabold text-white">
                     <Link to="home" spy={true} smooth={true} duration={500}>
-                        <span className="text-4xl">Kandy</span>
-                        <br/>
-                        <span className="text-xl">Cooking class</span>
+                        <div className="cursor-pointer">
+                            <span className="text-4xl">Kandy</span>
+                            <br/>
+                            <span className="text-xl">Cooking class</span>
+                        </div>
+
                     </Link>
                 </h3>
             </div>
             <div className="items-center hidden space-x-12 md:flex text-white">
                 <Link to="about" spy={true} smooth={true} duration={500}>
-                    About us
+                    <div className="cursor-pointer">
+                        About us
+                    </div>
                 </Link>
                 <Link to="services" spy={true} smooth={true} duration={500}>
+                    <div className="cursor-pointer">
                     Services
+                    </div>
                 </Link>
                 <Link to="menu" spy={true} smooth={true} duration={500}>
+                    <div className="cursor-pointer">
                     Menu
+                    </div>
                 </Link>
                 <Link to="herbs" spy={true} smooth={true} duration={500}>
+                    <div className="cursor-pointer">
                     Herbs
+                    </div>
                 </Link>
                 <Link to="contact" spy={true} smooth={true} duration={500}>
+                    <div className="cursor-pointer">
                     Contact us
+                    </div>
                 </Link>
             </div>
 
@@ -103,9 +117,11 @@ const Navbar = () => {
                         smooth={true}
                         duration={500}
                     >
+                        <div className="cursor-pointer">
                         <span className="text-4xl">Kandy</span>
                         <br/>
                         <span className="text-xl">Cooking class</span>
+                        </div>
                     </Link>
 
                 </h1>
@@ -120,7 +136,9 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                         >
+                            <div className="cursor-pointer">
                             About us
+                            </div>
                         </Link>
                     </li>
                     <li className="p-4 border-b border-gray-600">
@@ -133,7 +151,9 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                         >
+                            <div className="cursor-pointer">
                             Services
+                            </div>
                         </Link>
                     </li>
                     <li className="p-4 border-b border-gray-600">
@@ -146,7 +166,9 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                         >
+                            <div className="cursor-pointer">
                             Menu
+                            </div>
                         </Link>
                     </li>
                     <li className="p-4 border-b border-gray-600">
@@ -159,7 +181,9 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                         >
+                            <div className="cursor-pointer">
                             Herbs
+                            </div>
                         </Link>
                     </li>
                     <li className="p-4 border-b border-gray-600">
@@ -172,7 +196,9 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                         >
+                            <div className="cursor-pointer">
                             Contact us
+                            </div>
                         </Link>
                     </li>
                 </ul>
