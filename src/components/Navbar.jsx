@@ -23,9 +23,11 @@ const Navbar = () => {
             if (currentPosition > prevScrollPosition) {
                 // Scrolling down
                 setVisible(true);
+                setNav(false);
             } else if (currentPosition < prevScrollPosition) {
                 // Scrolling up
                 setVisible(false);
+                setNav(false);
             }
 
             // Update previous scroll position
@@ -47,56 +49,55 @@ const Navbar = () => {
         <nav
             className={`flex justify-between w-full py-4 md:px-36 px-12 sticky top-0 z-[999] ${
                 isAtTop || visible
-                    ? "bg-transparent transition duration-300 ease-in"
-                    : "bg-black opacity-50 transition duration-300 ease-in"
+                    ? "top-[-100%] bg-transparent transition ease-in-out duration-500"
+                    : "bg-[#F8F3ED] transition ease-in-out duration-500"
             }`}
         >
 
-            <div className="flex items-center">
-                <h3 className="font-extrabold text-white">
+            <div className={`flex items-center ${isAtTop ? 'text-white' : 'text-black'}`}>
+                <h3 className={`font-extrabold ${isAtTop ? 'text-white' : 'text-black'}`}>
                     <Link to="home" spy={true} smooth={true} duration={500}>
                         <div className="cursor-pointer">
                             <span className="text-4xl">Kandy</span>
-                            <br/>
+                            <br />
                             <span className="text-xl">Cooking class</span>
                         </div>
-
                     </Link>
                 </h3>
             </div>
-            <div className="items-center hidden space-x-12 md:flex text-white">
+            <div className={`items-center hidden space-x-12 md:flex ${isAtTop ? 'text-white' : 'text-black'}`}>
                 <Link to="about" spy={true} smooth={true} duration={500}>
-                    <div className="cursor-pointer">
+                    <div className="cursor-pointer hover:text-xl hover:font-extrabold">
                         About us
                     </div>
                 </Link>
                 <Link to="services" spy={true} smooth={true} duration={500}>
-                    <div className="cursor-pointer">
-                    Services
+                    <div className="cursor-pointer hover:text-xl hover:font-extrabold">
+                        Services
                     </div>
                 </Link>
                 <Link to="menu" spy={true} smooth={true} duration={500}>
-                    <div className="cursor-pointer">
-                    Menu
+                    <div className="cursor-pointer hover:text-xl hover:font-extrabold">
+                        Menu
                     </div>
                 </Link>
                 <Link to="herbs" spy={true} smooth={true} duration={500}>
-                    <div className="cursor-pointer">
-                    Herbs
+                    <div className="cursor-pointer hover:text-xl hover:font-extrabold">
+                        Herbs
                     </div>
                 </Link>
                 <Link to="contact" spy={true} smooth={true} duration={500}>
-                    <div className="cursor-pointer">
-                    Contact us
+                    <div className="cursor-pointer hover:text-xl hover:font-extrabold">
+                        Contact us
                     </div>
                 </Link>
             </div>
 
-            <div onClick={handleNav} className="block md:hidden">
+            <div onClick={handleNav} className={`block md:hidden ${isAtTop ? 'text-white' : 'text-black'}`}>
                 {nav ? (
-                    <AiOutlineClose size={20} style={{ color: "white" }} />
+                    <AiOutlineClose size={20} />
                 ) : (
-                    <AiOutlineMenu size={20} style={{ color: "white" }} />
+                    <AiOutlineMenu size={20} />
                 )}
             </div>
 
@@ -126,7 +127,7 @@ const Navbar = () => {
 
                 </h1>
                 <ul className="p-4 mt-20 text-black">
-                    <li className="p-4 border-b border-gray-600">
+                    <li className="p-4 border-b border-gray-600 hover:text-xl hover:font-extrabold">
                         <Link
                             to="about"
                             onClick={() => {
@@ -136,12 +137,12 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                         >
-                            <div className="cursor-pointer">
+                            <div className="cursor-pointer hov">
                             About us
                             </div>
                         </Link>
                     </li>
-                    <li className="p-4 border-b border-gray-600">
+                    <li className="p-4 border-b border-gray-600 hover:text-xl hover:font-extrabold">
                         <Link
                             to="services"
                             onClick={() => {
@@ -156,7 +157,7 @@ const Navbar = () => {
                             </div>
                         </Link>
                     </li>
-                    <li className="p-4 border-b border-gray-600">
+                    <li className="p-4 border-b border-gray-600 hover:text-xl hover:font-extrabold">
                         <Link
                             to="menu"
                             onClick={() => {
@@ -171,7 +172,7 @@ const Navbar = () => {
                             </div>
                         </Link>
                     </li>
-                    <li className="p-4 border-b border-gray-600">
+                    <li className="p-4 border-b border-gray-600 hover:text-xl hover:font-extrabold">
                         <Link
                             to="herbs"
                             onClick={() => {
@@ -186,7 +187,7 @@ const Navbar = () => {
                             </div>
                         </Link>
                     </li>
-                    <li className="p-4 border-b border-gray-600">
+                    <li className="p-4 border-b border-gray-600 hover:text-xl hover:font-extrabold">
                         <Link
                             to="contact"
                             onClick={() => {
