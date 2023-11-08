@@ -214,7 +214,7 @@ const ReservationForm = () => {
                         <img
                             src={food1}
                             alt="Burger"
-                            className="mb-2 w-16 h-16 object-cover"
+                            className="mb-2 w-50 h-40 object-cover"
                         />
                         <div className="flex items-center">
                             <button
@@ -239,7 +239,7 @@ const ReservationForm = () => {
                         <img
                             src={food2}
                             alt="Pasta"
-                            className="mb-2 w-16 h-16 object-cover"
+                            className="mb-2 w-50 h-40 object-cover"
                         />
                         <div className="flex items-center">
                             <button
@@ -264,7 +264,7 @@ const ReservationForm = () => {
                         <img
                             src={food3}
                             alt="Submarine"
-                            className="mb-2 w-16 h-16 object-cover"
+                            className="mb-2 w-50 h-40 object-cover"
                         />
                         <div className="flex items-center">
                             <button
@@ -289,7 +289,7 @@ const ReservationForm = () => {
                         <img
                             src={food4}
                             alt="Hot Dogs"
-                            className="mb-2 w-16 h-16 object-cover"
+                            className="mb-2 w-50 h-40 object-cover"
                         />
                         <div className="flex items-center">
                             <button
@@ -319,7 +319,7 @@ const ReservationForm = () => {
             </div>
             <div className="flex justify-between items-center">
                 <div>
-                    <p className="text-[#A97E48] mb-2 block">Total: ${total}</p>
+                    <p className="text-[#A97E48] text-4xl mb-2 block">Total: ${total}</p>
                 </div>
                 <button
                     onClick={calculateTotal}
