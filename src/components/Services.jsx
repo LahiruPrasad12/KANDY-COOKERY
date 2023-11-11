@@ -12,7 +12,7 @@ const Services = () => {
     const fadeIn = useSpring({
         opacity: isVisible ? 1 : 0,
         from: { opacity: 0 },
-        config: { duration: 1000 },
+        config: { duration: 2500 },
     });
 
     const slideUp = useSpring({
